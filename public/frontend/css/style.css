@@ -1,0 +1,21 @@
+/* Theme */
+.p-txt-color{color: #60616c;}
+
+
+
+
+.home-main-logo{width: 100px;}
+.home-carousel-h{height: 500px; border: 1px solid #ccc; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);}
+a{text-decoration: none;}
+.home-carosal-s{text-align: left; color: black; padding-right: 30%; padding-top: 30%;}
+.home-carosal-text-background{padding: 30px; background-color: #FFF; border-radius: 10px;}
+.home-carosal-txt-p{background-color: #4b6bfb; padding: 10px; color: #FFF; border: #4b6bfb; border-radius: 5px;}
+.search-form {position: relative;}
+.search-input {padding-left: 2.5rem; /* space for icon */border: none;background-color: #f5f5f5;border-radius: 10px;height: 40px;box-shadow: none;}
+.search-input::placeholder {color: #999;}
+.search-form::before {content: "\1F50D"; /* Unicode for magnifying glass */position: absolute;left: 10px;top: 50%;transform: translateY(-50%);color: #666;font-size: 16px;pointer-events: none;}
+.home-card-img{padding: 15px; border-radius: 5px;}
+.nav-link{color: #60616c;}
+.footer-color{background-color: #f6f6f7;}
+.singleBlog-padding{padding: 0px 150px;}
+.admin-carosal-img{width: 20%;}

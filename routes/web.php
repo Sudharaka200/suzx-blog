@@ -45,3 +45,14 @@ Route::get('/',[PostController::class, 'AllPost'])->name('home');
 
 //Single Post view with post id
 Route::get('/singlePost/{id}', [PostController::class, 'Apostsingle'])->name('postsingle');
+
+//Admin Dashboard
+Route::get('admin/dashboard', [PostController::class, 'displayallAdsAdmin'])->name('post.display');
+
+//Update Post
+Route::get('admin/updatePost/{id}', [PostController::class, 'updateform'])->name('updateForm');
+Route::put('/admin/update/{id}', [PostController::class, 'updateBlog'])->name('post.update');
+
+//Delete Post
+Route::delete('admin/delete/{id}', [PostController::class, 'deletePost'])->name('post.delete');
+

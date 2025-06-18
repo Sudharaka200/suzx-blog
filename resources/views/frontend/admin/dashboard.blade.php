@@ -28,23 +28,11 @@
                             <td>The Impact of Technology on the Workplace: How Technology is Changing</td>
                             <td>Some representative placeholder content for the first slide.</td>
                             <td>
-                                <button class="btn btn-primary">Edit</button>
+                                <button class="btn btn-primary">Edit</button> <br>
                                 <button class="btn btn-danger mt-2">Delete</button>
                             </td>
                         </tr>
 
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>
-                                <img class="admin-carosal-img" src="../images/c-img1.png" alt="">
-                            </td>
-                            <td>The Impact of Technology on the Workplace: How Technology is Changing</td>
-                            <td>Some representative placeholder content for the first slide.</td>
-                            <td>
-                                <button class="btn btn-primary">Edit</button>
-                                <button class="btn btn-danger mt-2">Delete</button>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -68,33 +56,30 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>
-                                <img class="admin-carosal-img" src="../images/Rectangle 381.png" alt="">
-                            </td>
-                            <td>The Impact of Technology on the Workplace: How Technology is Changing</td>
-                            <td>Some representative placeholder content for the first slide.</td>
-                            <td>August 20, 2022</td>
-                            <td>
-                                <button class="btn btn-primary">Edit</button>
-                                <button class="btn btn-danger mt-2">Delete</button>
-                            </td>
-                        </tr>
 
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>
-                                <img class="admin-carosal-img" src="../images/Rectangle 384.png" alt="">
-                            </td>
-                            <td>The Impact of Technology on the Workplace: How Technology is Changing</td>
-                            <td>Some representative placeholder content for the first slide.</td>
-                            <td>August 20, 2022</td>
-                            <td>
-                                <button class="btn btn-primary">Edit</button>
-                                <button class="btn btn-danger mt-2">Delete</button>
-                            </td>
-                        </tr>
+                        @foreach ($Posts as $Post)
+
+                            <tr>
+                                <th scope="row">{{ $Post->id }}</th>
+                                <td>
+                                    <img class="admin-carosal-img" src="{{asset('frontend/images/Rectangle 381.png') }}"
+                                        alt="">
+                                </td>
+                                <td>{{ $Post->title1 }}</td>
+                                <td>{{ $Post->description1 }}</td>
+                                <td>{{ $Post->created_at }}</td>
+                                <td>
+                                    <a href="{{ route('updateForm', $Post->id) }}" class="btn btn-primary">Edit</a> <br>
+                                    <form action="{{ route('post.delete', $Post->id )}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger mt-2">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>

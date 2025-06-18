@@ -19,7 +19,7 @@
                 </a>
             </form>
 
-            <a href="{{ url('/login') }}">
+            <a href="{{ route('post') }}">
                 <button type="submit" class="btn btn-primary">Login</button>
             </a>
             <!-- Login Form -->

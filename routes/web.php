@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //nVigation URL
-Route::get('/', function() {
-    return view('frontend.Home');
-});
+// Route::get('/', function() {
+//     return view('frontend.Home');
+// });
 
-Route::get('/singleblog', function() {
-    return view('frontend.SingleBlog');
-});
+// Route::get('/singleblog', function() {
+//     return view('frontend.SingleBlog');
+// });
 
 Route::get('/admin', function() {
     return view('frontend.admin.admin');
@@ -39,3 +39,9 @@ Route::get('/addNewPost', function(){
 
 //create a blog url
 Route::post('post/store', [PostController::class, 'store'])->name('post.store');
+
+//display all post
+Route::get('/',[PostController::class, 'AllPost'])->name('home');
+
+//Single Post view with post id
+Route::get('/singlePost/{id}', [PostController::class, 'Apostsingle'])->name('postsingle');

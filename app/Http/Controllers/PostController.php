@@ -29,4 +29,23 @@ class PostController extends Controller
         Post::create($request->only(['img_url1', 'title1', 'discription1']));
         return redirect()->back()->with('success', 'Post saved successfully!');
     }
+
+
+    //Display Post 
+    public function allPost(){
+        $Posts = Post::all();
+        return view('frontend.Home', compact('Posts'));
+    }
+
+    //display single post
+    public function Apostsingle($id){
+         $Post = Post::findOrFail($id);
+        return view('frontend.SingleBlog', compact('Post'));
+    }
+
+
+
+
+
+
 }

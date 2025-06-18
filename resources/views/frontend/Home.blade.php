@@ -63,122 +63,21 @@
     <div class="container mt-5">
         <h3 class="mb-3">Latest Post</h3>
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <a href="{{ url('/singleblog') }}">
+            @foreach ($Posts as $Post)
+                
+            <a href="{{ route('postsingle', $Post->id) }}">
                 <div class="col">
                     <div class="card h-100">
                         <img src="frontend/images/Rectangle 38.png" class="card-img-top home-card-img" alt="...">
                         <div class="card-body">
-                            <h5 class="fw-bold mt-2">The Impact of Technology on the Workplace: How Technology is
-                                Changing</h5>
+                            <h5 class="fw-bold mt-2">{{$Post->title1}}</h5>
                             <p class="card-text p-txt-color">August 20, 2022</p>
                         </div>
                     </div>
                 </div>
             </a>
 
-            <a href="Pages/SingleBlog.html">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="frontend/images/Rectangle 381.png" class="card-img-top home-card-img" alt="...">
-                        <div class="card-body">
-                            <h5 class="fw-bold mt-2">The Impact of Technology on the Workplace: How Technology is
-                                Changing</h5>
-                            <p class="card-text p-txt-color">August 20, 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="Pages/SingleBlog.html">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="frontend/images/Rectangle 382.png" class="card-img-top home-card-img" alt="...">
-                        <div class="card-body">
-                            <h5 class="fw-bold mt-2">The Impact of Technology on the Workplace: How Technology is
-                                Changing</h5>
-                            <p class="card-text p-txt-color">August 20, 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="Pages/SingleBlog.html">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="frontend/images/Rectangle 383.png" class="card-img-top home-card-img" alt="...">
-                        <div class="card-body">
-                            <h5 class="fw-bold mt-2">The Impact of Technology on the Workplace: How Technology is
-                                Changing</h5>
-                            <p class="card-text p-txt-color">August 20, 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="Pages/SingleBlog.html">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="frontend/images/Rectangle 384.png" class="card-img-top home-card-img" alt="...">
-                        <div class="card-body">
-                            <h5 class="fw-bold mt-2">The Impact of Technology on the Workplace: How Technology is
-                                Changing</h5>
-                            <p class="card-text p-txt-color">August 20, 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="Pages/SingleBlog.html">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="frontend/images/Rectangle 385.png" class="card-img-top home-card-img" alt="...">
-                        <div class="card-body">
-                            <h5 class="fw-bold mt-2">The Impact of Technology on the Workplace: How Technology is
-                                Changing</h5>
-                            <p class="card-text p-txt-color">August 20, 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="Pages/SingleBlog.html">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="frontend/images/Rectangle 386.png" class="card-img-top home-card-img" alt="...">
-                        <div class="card-body">
-                            <h5 class="fw-bold mt-2">The Impact of Technology on the Workplace: How Technology is
-                                Changing</h5>
-                            <p class="card-text p-txt-color">August 20, 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="Pages/SingleBlog.html">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="frontend/images/Rectangle 387.png" class="card-img-top home-card-img" alt="...">
-                        <div class="card-body">
-                            <h5 class="fw-bold mt-2">The Impact of Technology on the Workplace: How Technology is
-                                Changing</h5>
-                            <p class="card-text p-txt-color">August 20, 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="Pages/SingleBlog.html">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="frontend/images/Rectangle 389.png" class="card-img-top home-card-img" alt="...">
-                        <div class="card-body">
-                            <h5 class="fw-bold mt-2">The Impact of Technology on the Workplace: How Technology is
-                                Changing</h5>
-                            <p class="card-text p-txt-color">August 20, 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
+            @endforeach
 
         </div>
     </div>

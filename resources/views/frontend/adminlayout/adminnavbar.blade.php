@@ -10,7 +10,7 @@
                 <div class="mx-end">
                     <ul class="navbar-nav d-flex flex-row gap-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
                         </li>
                     </ul>
                 </div>

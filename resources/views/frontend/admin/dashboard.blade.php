@@ -52,7 +52,7 @@
 
         <div class="mt-5">
             <h5>Blog Post</h5>
-            <a href="../Admin/addPost.html">
+            <a href="{{ url('/addNewPost') }}">
                 <button class="btn btn-primary mt-2 mb-4">Add New Blog</button>
             </a>
             <div>

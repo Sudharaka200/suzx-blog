@@ -19,7 +19,7 @@
                 </a>
             </form>
 
-            <a href="../Admin/dashboard.html">
+            <a href="{{ url('/login') }}">
                 <button type="submit" class="btn btn-primary">Login</button>
             </a>
             <!-- Login Form -->

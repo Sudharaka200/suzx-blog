@@ -37,6 +37,7 @@ Route::get('/addNewPost', function(){
     return view('frontend.admin.addpost');
 });
 
+
 //create a blog url
 Route::post('post/store', [PostController::class, 'store'])->name('post.store');
 

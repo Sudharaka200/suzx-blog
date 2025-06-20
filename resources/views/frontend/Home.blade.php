@@ -71,7 +71,7 @@
                         <img src="frontend/images/Rectangle 38.png" class="card-img-top home-card-img" alt="...">
                         <div class="card-body">
                             <h5 class="fw-bold mt-2">{{$Post->title1}}</h5>
-                            <p class="card-text p-txt-color">August 20, 2022</p>
+                            <p class="card-text p-txt-color">{{ $Post->created_at->format('F d, Y') }}</p>
                         </div>
                     </div>
                 </div>
